@@ -3,11 +3,11 @@ import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-    {name: "Home", href: "#Home" },
-    {name: "About", href: "#About" },
-    {name: "Skills", href: "#Skilss" },
-    {name: "Projects", href: "#Projects" },
-    {name: "Contacs", href: "#Contacs" },
+    {name: "Home", href: "Home" },
+    {name: "About", href: "About" },
+    {name: "Skills", href: "Skilss" },
+    {name: "Projects", href: "Projects" },
+    {name: "Contacs", href: "Contacs" },
 ]
 
 export const Navbar = () =>{
@@ -27,7 +27,7 @@ export const Navbar = () =>{
     return <nav className={cn("fixed w-full z-40 transition-all duration-300",
      isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs":"py-5")}>
         <div className="container flex items-center justify-between">
-            <a className="text-xl font-bold text-primary flex items-center" href="#Home">
+            <a className="text-xl font-bold text-primary flex items-center" href="Home">
                 <span className="relative z-10">
                     <span className="text-glow text-foreground"> Theodore Zachary</span> Portfolio
                 </span>
