@@ -132,7 +132,6 @@
 @utility image-display{
   @apply relative rounded-md;
   width: 450px;
-  height: 450px;
 }
 
 @utility gradient-border{
