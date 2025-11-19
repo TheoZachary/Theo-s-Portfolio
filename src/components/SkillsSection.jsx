@@ -3,32 +3,32 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 80, category: "frontend" },
-  { name: "React", level: 70, category: "frontend" },
-  { name: "Tailwind CSS", level: 75, category: "frontend" },
+  { name: "HTML/CSS", category: "Frontend" },
+  { name: "JavaScript", category: "Frontend" },
+  { name: "React", category: "Frontend" },
+  { name: "Tailwind CSS", category: "Frontend" },
 
   // Backend
-  { name: "Java", level: 80, category: "backend" },
-  { name: "mySql", level: 80, category: "backend" },
-  { name: "Python", level: 85, category: "backend" },
-  { name: "C", level: 85, category: "backend" },
+  { name: "Java", category: "Backend" },
+  { name: "mySql", category: "Backend" },
+  { name: "Python", category: "Backend" },
+  { name: "C", category: "Backend" },
 
   // Tools
-  { name: "Git/GitHub", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 90, category: "tools" },
+  { name: "Git/GitHub", category: "Tools" },
+  { name: "Figma", category: "Tools" },
+  { name: "VS Code", category: "Tools" },
 
   //Ai
-  { name: "Machine Learning", level: 85, category: "AI" },
-  { name: "Deep Learning", level: 80, category: "AI" },
-  { name: "IoT", level: 70, category: "AI" },
+  { name: "Machine Learning", category: "AI" },
+  { name: "Deep Learning", category: "AI" },
+  { name: "IoT", category: "AI" },
 
-  { name: "Guitar", level : 85, category: "others"},
+  { name: "Guitar", category: "Hobby"},
 
 ];
 
-const categories = ["all", "frontend", "backend", "tools", "AI"];
+const categories = ["all", "Frontend", "Backend","AI","Tools", "Hobby"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -69,18 +69,8 @@ export const SkillsSection = () => {
               <div className="text-left mb-4">
                 <h3 className="font-semibold text-lg"> {skill.name}</h3>
               </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
 
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
+              
             </div>
           ))}
         </div>
